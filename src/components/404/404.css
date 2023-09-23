@@ -1,0 +1,51 @@
+.NotFound {
+  height: 100vh;
+  background-color: var(--main-bg-color);
+}
+
+.NotFound__container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+
+.NotFound__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.NotFound__content-title {
+  font-size: 140px;
+  line-height: 170px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .NotFound__content-title {
+    font-size: 80px;
+    line-height: 96px;
+  }
+}
+
+.NotFound__content-desc {
+  font-size: 16px;
+  line-height: 20px;
+}
+@media (max-width: 767px) {
+  .NotFound__content-desc {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.NotFound__footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 70px;
+}
+
+.NotFound__back {
+  color: var(--action-bg-color);
+}

@@ -5,6 +5,7 @@ import SavedMovies from './components/SavedMovies/SavedMovies';
 import Profile from './components/Profile/Profile';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import NotFound from './components/404/404';
 import React from 'react';
 
 export const router = createBrowserRouter([
@@ -34,6 +35,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>404</div>,
+    element: <NotFound />,
   },
 ]);

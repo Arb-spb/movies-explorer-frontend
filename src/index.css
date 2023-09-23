@@ -4,10 +4,13 @@
 :root {
   --main-bg-color: #202020;
   --secondary-bg-color: #073042;
+  --action-bg-color: #4285f4;
+
   --main-color: #fff;
   --main-color-hover: #a0a0a0;
   --main-color-active: #3456f3;
   --secondary-color: #000;
+
 }
 
 * {
@@ -21,4 +24,33 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: var(--main-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.2ms ease-in-out;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  outline: 0;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
+  color: inherit;
 }

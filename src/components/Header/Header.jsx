@@ -8,7 +8,9 @@ function Header() {
       <div className="Header__container">
         <div className="Header__wrap">
           <div className="Header__left">
-            <img src={logo} alt="логотип"/>
+            <Link to="/" className="Header__left-logo">
+              <img src={logo} alt="логотип"/>
+            </Link>
             <ul className="Header__left-list">
               <li>
                 <Link className="Header__left-link" to="/films">Фильмы</Link>
