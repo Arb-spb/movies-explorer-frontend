@@ -1,1 +1,31 @@
-.Navigation {}
+.Navigation {
+  display: none;
+}
+@media (min-width: 768px){
+  .Navigation {
+    display: flex;
+  }
+}
+
+.Navigation_list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.Navigation__link {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.Navigation__link.active {
+  font-weight: 500;
+}
+
+.Navigation__link:hover {
+  color: var(--main-color-hover);
+}
+
+.Navigation__link:active {
+  color: var(--main-color-active);
+}
