@@ -67,3 +67,20 @@ export const TECHNOLOGIES = [
     text: 'mongoDB'
   }
 ]
+export const PORTFOLIO = [
+  {
+    id: 1,
+    to: '/',
+    text: 'Статичный сайт'
+  },
+  {
+    id: 2,
+    to: '/',
+    text: 'Адаптивный сайт'
+  },
+  {
+    id: 3,
+    to: '/',
+    text: 'Одностраничное приложение'
+  }
+]

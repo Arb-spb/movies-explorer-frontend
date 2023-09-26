@@ -1,13 +1,15 @@
 import { Outlet  } from 'react-router-dom';
 import Header from '../Header/Header';
-import MobileMenu from '../MobileMenu/MobileMenu';
+import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
 
 function Layout() {
   return (
     <>
       <Header />
-      <MobileMenu />
+      <Navigation />
       <Outlet />
+      <Footer />
     </>
   )
 }

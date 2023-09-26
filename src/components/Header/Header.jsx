@@ -1,8 +1,8 @@
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import burgerOpen from '../../images/burger-open.svg';
-import Navigation from '../Navigation/Navigation';
+import { NAVIGATION_DESKTOP } from "../../constants";
 
 function Header() {
   const isAuth = true;
@@ -16,7 +16,17 @@ function Header() {
             <Link to="/" className="Header__left-logo">
               <img src={logo} alt="логотип"/>
             </Link>
-            {isAuth && <Navigation/>}
+            {isAuth && (
+              <nav className="Header__Navigation">
+                <ul className="Header__Navigation-list">
+                  {NAVIGATION_DESKTOP.map(item => (
+                    <li key={item.id}>
+                      <NavLink  className="Header__Navigation-link" to={item.to}>{item.text}</NavLink >
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </div>
           {isAuth && (
             <Link to="/profile" className="Header__right">

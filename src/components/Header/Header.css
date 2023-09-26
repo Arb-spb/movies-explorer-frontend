@@ -47,7 +47,40 @@
     display: flex;
     gap: 10px;
 }
+/*////////////////////////*/
 
+.Header__Navigation {
+    display: none;
+}
+@media (min-width: 768px){
+    .Header__Navigation {
+        display: flex;
+    }
+}
+
+.Header__Navigation-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.Header__Navigation-link {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.Header__Navigation-link.active {
+    font-weight: 500;
+}
+
+.Header__Navigation-link:hover {
+    color: var(--main-color-hover);
+}
+
+.Header__Navigation-link:active {
+    color: var(--main-color-active);
+}
+/*////////////////////////*/
 .Header__right {
     display: none;
     color: var(--main-color);
