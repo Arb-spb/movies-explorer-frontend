@@ -1,0 +1,9 @@
+.Portfolio {
+  background-color: var(--section-bg-color);
+}
+
+.Portfolio__container {
+  padding-bottom: 70px;
+  padding-left: 14px;
+  padding-right: 14px;
+}

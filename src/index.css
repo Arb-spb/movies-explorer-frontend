@@ -6,6 +6,9 @@
   --secondary-bg-color: #073042;
   --action-bg-color: #4285f4;
   --green-bg-color: #3ddc84;
+  --gray-bg-color: #303030;
+  --border-bg-color: #dAdAdA;
+  --section-bg-color: #272727;
 
   --main-color: #fff;
   --main-color-hover: #a0a0a0;
@@ -60,4 +63,8 @@ button {
 a {
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+}
+
+img {
+  max-width: 100%;
 }
