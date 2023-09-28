@@ -47,7 +47,6 @@
     display: flex;
     gap: 10px;
 }
-/*////////////////////////*/
 
 .Header__Navigation {
     display: none;
@@ -80,14 +79,14 @@
 .Header__Navigation-link:active {
     color: var(--main-color-active);
 }
-/*////////////////////////*/
+
 .Header__right {
     display: none;
     color: var(--main-color);
     text-decoration: none;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     .Header__right {
         display: inline-block;
     }
@@ -101,8 +100,14 @@
 
 .Header__right-open {
     display:  flex;
+    width: 40px;
 }
 @media (min-width: 768px){
+    .Header__right-open {
+        width: 44px;
+    }
+}
+@media (min-width: 1024px){
     .Header__right-open {
         display: none;
     }

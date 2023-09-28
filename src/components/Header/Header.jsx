@@ -1,12 +1,17 @@
 import './Header.css';
-import { Link, NavLink } from 'react-router-dom';
+import {Link, NavLink, useLocation} from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import burgerOpen from '../../images/burger-open.svg';
-import { NAVIGATION_DESKTOP } from "../../constants";
+import {NAVIGATION_DESKTOP, ROUTE_PROFILE} from "../../constants";
 
 function Header() {
+  const location = useLocation();
   const isAuth = true;
-  const isDark = false;
+  let isDark = false;
+
+  if (location.pathname === ROUTE_PROFILE) {
+    isDark = true;
+  }
 
   return (
     <header className={`Header${isDark ? ' Header--dark' : ''}`}>
