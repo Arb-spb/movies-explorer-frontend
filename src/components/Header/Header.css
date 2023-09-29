@@ -86,7 +86,7 @@
     text-decoration: none;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
     .Header__right {
         display: inline-block;
     }
@@ -104,11 +104,6 @@
 }
 @media (min-width: 768px){
     .Header__right-open {
-        width: 44px;
-    }
-}
-@media (min-width: 1024px){
-    .Header__right-open {
         display: none;
     }
 }
@@ -119,7 +114,7 @@
     font-size: 10px;
     gap: 14px;
 }
-@media (min-width: 767px){
+@media (min-width: 768px){
     .Header__right-auth {
         font-size: 12px;
         line-height: 16px;
