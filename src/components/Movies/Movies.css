@@ -1,1 +1,48 @@
-.Movies {}
+.Movies {
+  background-color: var(--main-bg-color);
+}
+
+.Movies__container {
+  padding: 78px 10px 38px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (min-width: 768px){
+  .Movies__container {
+    padding: 80px 30px 40px;
+  }
+}
+@media (min-width: 1024px){
+  .Movies__container {
+    padding: 70px 70px 45px;
+  }
+}
+
+.Movies__search {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  border-bottom: 1px solid var(--secondary-border-bg-color);
+  padding-bottom: 44px;
+}
+@media (min-width: 768px){
+  .Movies__search {
+    flex-direction: row;
+    gap: 0;
+    padding-bottom: 109px;
+  }
+}
+@media (min-width: 1024px){
+  .Movies__search {
+    padding-bottom: 70px;
+  }
+}
+
+.Movies__list {
+  padding: 50px 0 40px;
+}
+@media (min-width: 768px){
+  .Movies__list {
+    padding-top: 80px;
+  }
+}

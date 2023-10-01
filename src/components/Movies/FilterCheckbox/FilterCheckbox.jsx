@@ -1,7 +1,10 @@
+import './FilterCheckbox.css';
+
 function FilterCheckbox() {
   return (
-    <div>
-      <div>FilterCheckbox</div>
+    <div className="FilterCheckbox">
+      <input type="checkbox" className="FilterCheckbox__input" id="FilterCheckbox"/>
+      <label htmlFor="FilterCheckbox" className="FilterCheckbox__label">Короткометражки</label>
     </div>
   )
 }

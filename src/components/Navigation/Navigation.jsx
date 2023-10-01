@@ -7,7 +7,7 @@ function Navigation({ list, isSidebar }) {
   const isOpen = false;
 
   return (
-    <div className={`Navigation${isOpen ? ' Navigation--open': ''}`}>
+    <nav className={`Navigation${isOpen ? ' Navigation--open': ''}`}>
       <div className="Navigation__container">
         <div className="Navigation__content">
           <ul className="Navigation__list">
@@ -37,7 +37,7 @@ function Navigation({ list, isSidebar }) {
           <img src={burgerClosed} alt="закрыть меню"/>
         </button>
       </div>
-    </div>
+    </nav>
   )
 }
 

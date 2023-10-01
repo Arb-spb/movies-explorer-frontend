@@ -1,7 +1,11 @@
+import './Preloader.css';
+
 function Preloader() {
   return (
-    <div>
-      <div>Preloader</div>
+    <div className="Preloader">
+      <div className="Preloader__container">
+        <span className="Preloader__round"></span>
+      </div>
     </div>
   )
 }

@@ -5,8 +5,8 @@ import { ROUTE_REGISTER } from '../../constants';
 
 function Login() {
   return (
-    <div className="Login">
-      <div className="Login__container">
+    <main className="Login">
+      <section className="Login__container">
         <div className="Login__logo">
           <img src={logo} alt="логотип" />
         </div>
@@ -37,8 +37,8 @@ function Login() {
           </button>
         </form>
         <p className="Login__text">Ещё не&nbsp;зарегистрированы? <Link to={ROUTE_REGISTER} className="Login__register">Регистрация</Link></p>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
 

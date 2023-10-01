@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
 import App from './components/App/App';
+import Main from './components/Main/Main';
 import Movies from './components/Movies/Movies';
 import SavedMovies from './components/SavedMovies/SavedMovies';
 import Profile from './components/Profile/Profile';
@@ -20,11 +20,11 @@ import {
 export const router = createBrowserRouter([
   {
     path: ROUTE_HOME,
-    element: <Layout />,
+    element: <App />,
     children: [
       {
         path: ROUTE_HOME,
-        element: <App />,
+        element: <Main />,
       },
       {
         path: ROUTE_MOVIES,

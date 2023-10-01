@@ -1,9 +1,16 @@
-import Main from '../Main/Main';
+import './App.css';
+import Header from "../Header/Header";
+import Navigation from "../Navigation/Navigation";
+import {Outlet} from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Header />
+      <Navigation />
+      <Outlet />
+      <Footer />
     </div>
   );
 }
