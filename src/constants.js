@@ -70,17 +70,17 @@ export const TECHNOLOGIES = [
 export const PORTFOLIO = [
   {
     id: 1,
-    to: '/',
+    to: 'https://github.com/arba-octo',
     text: 'Статичный сайт'
   },
   {
     id: 2,
-    to: '/',
+    to: 'https://github.com/arba-octo',
     text: 'Адаптивный сайт'
   },
   {
     id: 3,
-    to: '/',
+    to: 'https://github.com/arba-octo',
     text: 'Одностраничное приложение'
   }
 ]
