@@ -1,11 +1,11 @@
-.FilterCheckbox {
+.SearchCheckbox {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media (min-width: 768px){
-  .FilterCheckbox {
+  .SearchCheckbox {
     background-color: var(--search-bg-color);
     border-bottom-right-radius: 9px;
     border-top-right-radius: 9px;
@@ -13,7 +13,7 @@
     padding-left: 20px;
   }
 
-  .FilterCheckbox:after {
+  .SearchCheckbox:after {
     content: '';
     position: absolute;
     height: 40px;
@@ -23,28 +23,28 @@
   }
 }
 @media (min-width: 1024px){
-  .FilterCheckbox {
+  .SearchCheckbox {
     padding-right: 30px;
     padding-left: 30px;
   }
 }
 
-.FilterCheckbox__label {
+.SearchCheckbox__label {
   font-size: 11px;
   line-height: 18px;
 }
 @media (min-width: 768px){
-  .FilterCheckbox__label {
+  .SearchCheckbox__label {
     font-size: 13px;
   }
 }
 
-.FilterCheckbox__input + .FilterCheckbox__label {
+.SearchCheckbox__input + .SearchCheckbox__label {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
-.FilterCheckbox__input:not(checked) {
+.SearchCheckbox__input:not(checked) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -55,12 +55,12 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.FilterCheckbox__input:not(checked) + .FilterCheckbox__label {
+.SearchCheckbox__input:not(checked) + .SearchCheckbox__label {
   position: relative;
   padding: 0 0 0 49px;
 }
 
-.FilterCheckbox__input:not(checked) + .FilterCheckbox__label:before {
+.SearchCheckbox__input:not(checked) + .SearchCheckbox__label:before {
   content: '';
   position: absolute;
   top: -1px;
@@ -71,7 +71,7 @@
   background: var(--thum-bg-color);
 }
 
-.FilterCheckbox__input:not(checked) + .FilterCheckbox__label:after {
+.SearchCheckbox__input:not(checked) + .SearchCheckbox__label:after {
   content: '';
   position: absolute;
   top: 1px;
@@ -84,7 +84,7 @@
   border: 1px solid var(--main-color);
 }
 
-.FilterCheckbox__input:checked + .FilterCheckbox__label:after {
+.SearchCheckbox__input:checked + .SearchCheckbox__label:after {
   left: 18px;
   background-color: var(--thum-bg-checked);
 }

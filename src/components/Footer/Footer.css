@@ -49,6 +49,7 @@
     grid: 1fr / 1fr max-content max-content;
     text-align: left;
     gap: 20px;
+    margin: 20px 0;
   }
 }
 

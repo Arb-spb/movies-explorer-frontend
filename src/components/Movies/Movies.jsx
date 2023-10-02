@@ -1,12 +1,11 @@
 import './Movies.css';
 import Preloader from './Preloader/Preloader';
 import { STATUS_LOADING } from '../../constants';
-import SearchForm from './SearchForm/SearchForm';
-import FilterCheckbox from './FilterCheckbox/FilterCheckbox';
+import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from './MoviesCardList/MoviesCardList';
 
 function Movies() {
-  const status = STATUS_LOADING + '1';
+  const status = STATUS_LOADING + 'not-load';
 
   if (status === STATUS_LOADING) {
     return (
@@ -21,7 +20,6 @@ function Movies() {
       <div className="Movies__container">
         <section className="Movies__search">
           <SearchForm />
-          <FilterCheckbox />
         </section>
         <section className="Movies__list">
           <MoviesCardList />

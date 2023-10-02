@@ -1,4 +1,4 @@
-.SearchForm {
+.SearchControl {
   border-radius: 9px;
   display: flex;
   height: 72px;
@@ -8,37 +8,42 @@
   width: 100%;
 }
 @media (min-width: 768px){
-  .SearchForm {
+  .SearchControl {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
 }
 
-.SearchForm__wrapper {
+.SearchControl__wrapper {
   display: flex;
   flex: 1 1 auto;
   padding: 0 19px;
   align-items: center;
 }
 @media (min-width: 768px){
-  .SearchForm__wrapper {
+  .SearchControl__wrapper {
     padding-right: 20px;
   }
 }
+@media (min-width: 1024px){
+  .SearchControl__wrapper {
+    padding-right: 28px;
+  }
+}
 
-.SearchForm__img {
+.SearchControl__img {
   display: none;
   position: absolute;
   top: 27px;
   left: 25px;
 }
 @media (min-width: 768px){
-  .SearchForm__img {
+  .SearchControl__img {
     display: inline-flex;
   }
 }
 
-.SearchForm__input {
+.SearchControl__input {
   background: transparent;
   border: none;
   color: var(--main-color);
@@ -51,14 +56,14 @@
   font-size: 14px;
 }
 @media (min-width: 768px){
-  .SearchForm__input {
+  .SearchControl__input {
     font-size: 18px;
     line-height: 20px;
     padding-left: 43px;
   }
 }
 
-.SearchForm__submit {
+.SearchControl__submit {
   background-color: var(--action-bg-color);
   border: none;
   border-radius: 30px;
@@ -69,7 +74,7 @@
   padding: 8px 12px;
 }
 
-.SearchForm__submit:hover,
-.SearchForm__submit:active {
+.SearchControl__submit:hover,
+.SearchControl__submit:active {
   background-color: rgba(66, 133, 244, .8);
 }

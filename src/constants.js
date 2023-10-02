@@ -194,3 +194,24 @@ export const FAKE_CARDS_LIST = [
     duration: 104
   },
 ]
+
+export const FAKE_SAVE_CARDS_LIST = [
+  {
+    id: 1,
+    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
+    text: 'Большой дом',
+    duration: 92
+  },
+  {
+    id: 2,
+    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
+    text: 'Кибердеревня',
+    duration: 126
+  },
+  {
+    id: 3,
+    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
+    text: 'Новые папины дочки',
+    duration: 104
+  },
+]
