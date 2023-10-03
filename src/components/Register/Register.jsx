@@ -1,7 +1,8 @@
 import './Register.css';
 import logo from "../../images/logo.svg";
-import {Link} from "react-router-dom";
-import {ROUTE_REGISTER} from "../../constants";
+import { Link } from "react-router-dom";
+import { ROUTE_LOGIN } from "../../constants";
+import Input from '../Input/Input';
 
 function Register() {
   return (
@@ -13,40 +14,34 @@ function Register() {
         <h3 className="Register__title">Добро пожаловать!</h3>
         <form className="Register__from">
           <div className="Register__group">
-            <lable htmlFor="name" className="Register__label">Имя</lable>
-            <input
-              id="name"
+            <Input
+              htmlFor="name"
               type="text"
               name="name"
-              className="Register__input"
-              placeholder=""
+              label="Имя"
             />
           </div>
           <div className="Register__group">
-            <lable htmlFor="email" className="Register__label">E-mail</lable>
-            <input
-              id="email"
+            <Input
+              htmlFor="email"
               type="email"
               name="email"
-              className="Register__input"
-              placeholder=""
+              label="E-mail"
             />
           </div>
           <div className="Register__group">
-            <lable htmlFor="password" className="Register__label">E-mail</lable>
-            <input
-              id="password"
+            <Input
+              htmlFor="password"
               type="password"
               name="password"
-              className="Register__input"
-              placeholder=""
+              label="Пароль"
             />
           </div>
           <button type="submit" className="Register__submit">
             <span>Зарегистрироваться</span>
           </button>
         </form>
-        <p className="Register__text">Уже зарегистрированы? <Link to={ROUTE_REGISTER} className="Register__register">Войти</Link></p>
+        <p className="Register__text">Уже зарегистрированы? <Link to={ROUTE_LOGIN} className="Register__register">Войти</Link></p>
       </section>
     </main>
   )

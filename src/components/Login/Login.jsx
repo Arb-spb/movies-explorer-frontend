@@ -2,6 +2,7 @@ import './Login.css';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import { ROUTE_REGISTER } from '../../constants';
+import Input from '../Input/Input';
 
 function Login() {
   return (
@@ -13,23 +14,19 @@ function Login() {
         <h3 className="Login__title">Рады видеть!</h3>
         <form className="Login__from">
           <div className="Login__group">
-            <lable htmlFor="email" className="Login__label">E-mail</lable>
-            <input
-              id="email"
+            <Input
+              htmlFor="email"
               type="email"
               name="email"
-              className="Login__input"
-              placeholder=""
+              label="E-mail"
             />
           </div>
-          <div>
-            <lable htmlFor="password" className="Login__label">Пароль</lable>
-            <input
-              id="password"
+          <div className="Login__group">
+            <Input
+              htmlFor="password"
               type="password"
               name="password"
-              className="Login__input"
-              placeholder=""
+              label="Пароль"
             />
           </div>
           <button type="submit" className="Login__submit">

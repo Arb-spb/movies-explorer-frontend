@@ -6,7 +6,7 @@ import {NAVIGATION_DESKTOP, ROUTE_PROFILE} from "../../constants";
 
 function Header() {
   const location = useLocation();
-  const isAuth = true;
+  const isAuth = false;
   let isDark = false;
 
   if (location.pathname === ROUTE_PROFILE) {
