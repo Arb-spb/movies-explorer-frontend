@@ -1,16 +1,14 @@
-.MoviesCard {
+.SavedMoviesCard {
   display: flex;
   flex-direction: column;
 }
 
-.MoviesCard:hover .Movies__icon {
+.SavedMoviesCard:hover .SavedMoviesCard__icon {
   opacity: 1;
   visibility: visible;
 }
 
-
-
-.MoviesCard__content {
+.SavedMoviesCard__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,12 +16,12 @@
   border-bottom: 1px solid var(--secondary-border-bg-color);
 }
 
-.MoviesCard__text {
+.SavedMoviesCard__text {
   font-size: 12px;
   line-height: 14px;
 }
 
-.Movies__icon {
+.SavedMoviesCard__icon {
   width: 24px;
   height: 24px;
   border-radius: 50px;
@@ -34,13 +32,13 @@
 }
 
 @media (min-width: 768px){
-  .Movies__icon {
+  .SavedMoviesCard__icon {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-.MoviesCard__time {
+.SavedMoviesCard__time {
   margin-top: 6px;
   font-size: 10px;
   line-height: 12px;

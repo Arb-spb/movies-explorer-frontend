@@ -5,7 +5,7 @@ function Portfolio() {
   return (
     <section className="Portfolio">
       <div className="Portfolio__container">
-        <h5 className="Portfolio__title">Портфолио</h5>
+        <h2 className="Portfolio__title">Портфолио</h2>
         {PORTFOLIO.map(item => (
           <a key={item.id} href={item.to} target="_blank" rel="noreferrer nofollow noopener" className="Portfolio__wrap">
             <span className="Portfolio__text">{item.text}</span>

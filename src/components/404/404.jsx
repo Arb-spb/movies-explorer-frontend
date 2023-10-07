@@ -12,7 +12,7 @@ function NotFound() {
           <p className="NotFound__content-desc">Страница не найдена</p>
         </div>
         <div className="NotFound__footer">
-          <button type="button" className="NotFound__back" onClick={() => navigate(-1)}>назад</button>
+          <button type="button" className="NotFound__back" onClick={() => navigate('/')}>Назад</button>
         </div>
       </section>
     </main>

@@ -1,4 +1,26 @@
 .Navigation {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.Navigation--open {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.Navigation__bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  z-index: 101;
+}
+
+.Navigation__wrapper {
   transform: translate3d(100%, 0, 0);
   transition: transform 200ms ease-in-out;
   max-width: 520px;
@@ -7,11 +29,12 @@
   top: 0;
   right: 0;
   bottom: 0;
+  z-index: 101;
   background-color: var(--main-bg-color);
   overflow: auto;
 }
 
-.Navigation--open {
+.Navigation__wrapper--open {
   transform: translate3d(0, 0, 0);
 }
 

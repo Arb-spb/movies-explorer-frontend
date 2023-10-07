@@ -21,24 +21,28 @@
 }
 
 .Promo__text {
+  font-weight: 400;
   max-width: 500px;
   font-size: 30px;
   line-height: 39px;
   text-align: center;
   margin: 0 auto;
   padding: 0 6px;
+  letter-spacing: -0.6px;
 }
 @media (min-width: 768px){
   .Promo__text {
     max-width: 620px;
     font-size: 40px;
     line-height: 52px;
+    letter-spacing: -1.45px;
   }
 }
 @media (min-width: 1024px){
   .Promo__text {
     margin: 0;
     text-align: left;
+    padding: 0;
   }
 }
 

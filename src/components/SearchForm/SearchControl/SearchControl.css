@@ -2,7 +2,6 @@
   border-radius: 9px;
   display: flex;
   height: 72px;
-  position: relative;
   z-index: 100;
   background-color: var(--search-bg-color);
   width: 100%;
@@ -17,12 +16,12 @@
 .SearchControl__wrapper {
   display: flex;
   flex: 1 1 auto;
-  padding: 0 19px;
   align-items: center;
+  justify-content: space-between;
 }
 @media (min-width: 768px){
   .SearchControl__wrapper {
-    padding-right: 20px;
+    padding-left: 24px;
   }
 }
 @media (min-width: 1024px){
@@ -33,9 +32,6 @@
 
 .SearchControl__img {
   display: none;
-  position: absolute;
-  top: 27px;
-  left: 25px;
 }
 @media (min-width: 768px){
   .SearchControl__img {
@@ -51,16 +47,26 @@
   font-family: inherit;
   height: 100%;
   outline: none;
-  padding-right: 5px;
   width: 100%;
   font-size: 14px;
+  padding: 0 85px 0 19px;
 }
 @media (min-width: 768px){
   .SearchControl__input {
     font-size: 18px;
     line-height: 20px;
-    padding-left: 43px;
+    padding-left: 63px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
+}
+
+.SearchControl__input:focus {
+  box-shadow: 0 0 0 1px var(--action-bg-color);
+  border-radius: 9px;
 }
 
 .SearchControl__submit {
@@ -72,6 +78,19 @@
   line-height: 18px;
   font-weight: 500;
   padding: 8px 12px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+@media (min-width: 768px){
+  .SearchControl__submit {
+    right: 227px;
+  }
+}
+@media (min-width: 1024px){
+  .SearchControl__submit {
+    right: 257px;
+  }
 }
 
 .SearchControl__submit:hover,

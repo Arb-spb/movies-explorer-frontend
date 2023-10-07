@@ -4,7 +4,7 @@ import MoviesCardList from './MoviesCardList/MoviesCardList';
 
 function SavedMovies() {
   return (
-    <div className="SavedMovies">
+    <main className="SavedMovies">
       <div className="SavedMovies__container">
         <section className="SavedMovies__search">
           <SearchForm />
@@ -13,7 +13,7 @@ function SavedMovies() {
           <MoviesCardList />
         </section>
       </div>
-    </div>
+    </main>
   )
 }
 

@@ -4,7 +4,7 @@ import searchIcon from "../../../images/search.svg";
 function SearchControl() {
   return (
     <div className="SearchControl">
-      <div className="SearchControl__wrapper">
+      <form className="SearchControl__wrapper">
         <img src={searchIcon} alt="поиск" className="SearchControl__img" />
         <input
           type="text"
@@ -16,8 +16,8 @@ function SearchControl() {
           className="SearchControl__input"
           placeholder="Фильм"
         />
-        <button type="submit" className="SearchControl__submit">Найти</button>
-      </div>
+        <button type="button" className="SearchControl__submit">Найти</button>
+      </form>
     </div>
   )
 }

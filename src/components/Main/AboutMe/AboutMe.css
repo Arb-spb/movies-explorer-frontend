@@ -6,17 +6,17 @@
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
-  padding: 70px 14px;
+  padding: 85px 14px 65px;
 }
 @media (min-width: 768px){
   .AboutMe__container {
     max-width: 1280px;
-    padding: 90px 50px;
+    padding: 92px 50px;
   }
 }
 @media (min-width: 1024px){
   .AboutMe__container {
-    padding: 110px 70px;
+    padding: 110px 70px 95px;
   }
 }
 
@@ -26,6 +26,20 @@
   font-weight: 400;
   padding-bottom: 28px;
   border-bottom: 1px solid var(--border-bg-color);
+  letter-spacing: -.6px;
+}
+@media (min-width: 768px){
+  .AboutMe__title {
+    font-size: 22px;
+    line-height: 26px;
+    padding-bottom: 23px;
+    letter-spacing: -.8px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutMe__title {
+    letter-spacing: -1.2px;
+  }
 }
 
 .AboutMe__content {
@@ -38,11 +52,13 @@
   .AboutMe__content {
     flex-direction: row;
     gap: 50px;
+    margin-top: 64px;
   }
 }
 @media (min-width: 1024px){
   .AboutMe__content {
     justify-content: space-between;
+    margin-top: 70px;
   }
 }
 
@@ -61,12 +77,16 @@
   .AboutMe__name {
     font-size: 40px;
     line-height: 46px;
+    letter-spacing: -1.5px;
+    margin-bottom: 13px;
   }
 }
 @media (min-width: 1024px){
   .AboutMe__name {
     font-size: 50px;
     line-height: 50px;
+    letter-spacing: -2.5px;
+    margin-bottom: 22px;
   }
 }
 
@@ -84,9 +104,11 @@
 }
 @media (min-width: 1024px){
   .AboutMe__description {
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 18px;
+    line-height: 25px;
     max-width: 600px;
+    margin-bottom: 22px;
+    font-weight: 500;
   }
 }
 
@@ -101,12 +123,20 @@
 @media (min-width: 1024px){
   .AboutMe__description:last-of-type {
     margin-bottom: 95px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
   }
 }
 
 .AboutMe__github {
   color: inherit;
   font-weight: 500;
+}
+@media (min-width: 768px){
+  .AboutMe__github {
+    margin-top: 6px;
+  }
 }
 
 .AboutMe__media {

@@ -8,10 +8,10 @@ function Register() {
   return (
     <main className="Register">
       <section className="Register__container">
-        <div className="Register__logo">
+        <Link className="Register__logo" to="/">
           <img src={logo} alt="логотип" />
-        </div>
-        <h3 className="Register__title">Добро пожаловать!</h3>
+        </Link>
+        <h1 className="Register__title">Добро пожаловать!</h1>
         <form className="Register__from">
           <div className="Register__group">
             <Input

@@ -5,11 +5,11 @@ function AboutMe() {
   return (
     <section className="AboutMe">
       <div className="AboutMe__container">
-        <h3 className="AboutMe__title">Студент</h3>
+        <h2 className="AboutMe__title">Студент</h2>
         <div className="AboutMe__content">
           <div className="AboutMe__wrap">
-            <h5 className="AboutMe__name">Татьяна</h5>
-            <p className="AboutMe__description">Фронтенд-разработчик, 42&nbsp;года</p>
+            <h5 className="AboutMe__name">Виталий</h5>
+            <p className="AboutMe__description">Фронтенд-разработчик, 30&nbsp;лет</p>
             <p className="AboutMe__description">
               Я&nbsp;родился и&nbsp;живу в&nbsp;Саратове, закончил факультет экономики СГУ. У&nbsp;меня есть жена и&nbsp;дочь. Я&nbsp;люблю слушать музыку, а&nbsp;ещё увлекаюсь бегом. Недавно начал кодить.
               С&nbsp;2015 года работал в&nbsp;компании &laquo;СКБ Контур&raquo;. После того, как прошёл курс по&nbsp;веб-разработке, начал заниматься фриланс-заказами и&nbsp;ушёл с&nbsp;постоянной работы.

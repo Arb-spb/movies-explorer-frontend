@@ -34,7 +34,7 @@
 }
 
 .SavedMovies__list {
-  padding: 50px 0 40px;
+  padding: 50px 0 60px;
 }
 @media (min-width: 768px){
   .SavedMovies__list {

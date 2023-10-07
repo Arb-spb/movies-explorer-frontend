@@ -86,7 +86,7 @@
     text-decoration: none;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     .Header__right {
         display: inline-block;
     }
@@ -102,7 +102,7 @@
     display:  flex;
     width: 40px;
 }
-@media (min-width: 768px){
+@media (min-width: 1024px){
     .Header__right-open {
         display: none;
     }
@@ -135,11 +135,21 @@
 }
 
 .Header__right-login {
-    padding: 8px 20px;
+    padding: 4px 12px;
     background-color: var(--green-bg-color);
     border-radius: var(--main-border-radius);
     color: var(--secondary-color);
     transition: background-color .2s ease-in-out;
+}
+@media (min-width: 768px){
+    .Header__right-login {
+        padding: 7px 21px;
+    }
+}
+@media (min-width: 1024px){
+    .Header__right-login {
+        padding: 8px 22px;
+    }
 }
 
 .Header__right-login:hover {

@@ -27,7 +27,7 @@
 }
 
 .Portfolio__title {
-  margin: 0 0 40px;
+  margin: 0 0 42px;
   color: var(--main-color-hover);
   font-weight: 400;
   font-size: 14px;
@@ -46,21 +46,23 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 18px;
-  border-bottom: 1px solid var(--main-color-hover);
 }
 
 .Portfolio__wrap:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  border-bottom: 1px solid var(--main-color-hover);
 }
 
 .Portfolio__text {
   font-size: 18px;
   line-height: 28px;
+  letter-spacing: -.7px;
 }
 @media (min-width: 768px){
   .Portfolio__text {
     font-size: 28px;
     line-height: 50px;
+    letter-spacing: -1.2px;
   }
 }
 @media (min-width: 1024px){
@@ -73,11 +75,15 @@
 .Portfolio__icon {
   width: 11px;
   height: 11px;
+  margin-bottom: 3px;
+  margin-right: 4px;
 }
 @media (min-width: 768px){
   .Portfolio__icon {
     width: 15px;
     height: 15px;
+    margin-bottom: 1px;
+    margin-right: 6px;
   }
 }
 @media (min-width: 1024px){

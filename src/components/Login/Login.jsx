@@ -8,10 +8,10 @@ function Login() {
   return (
     <main className="Login">
       <section className="Login__container">
-        <div className="Login__logo">
+        <Link className="Login__logo" to="/">
           <img src={logo} alt="логотип" />
-        </div>
-        <h3 className="Login__title">Рады видеть!</h3>
+        </Link>
+        <h1 className="Login__title">Рады видеть!</h1>
         <form className="Login__from">
           <div className="Login__group">
             <Input

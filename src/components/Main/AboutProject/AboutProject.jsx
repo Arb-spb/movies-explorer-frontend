@@ -4,14 +4,14 @@ function AboutProject() {
   return (
     <section className="AboutProject">
       <div className="AboutProject__container">
-        <h3 className="AboutProject__title">О проекте</h3>
+        <h2 className="AboutProject__title">О проекте</h2>
         <div className="AboutProject__content">
           <div>
-            <h3 className="AboutProject__stage">Дипломный проект включал 5&nbsp;этапов</h3>
+            <h3 className="AboutProject__stage">Дипломный проект включал 5 этапов</h3>
             <p className="AboutProject__description">Составление плана, работу над бэкендом, вёрстку, добавление функциональности и&nbsp;финальные доработки.</p>
           </div>
           <div>
-            <h3 className="AboutProject__stage">На&nbsp;выполнение диплома ушло 5&nbsp;недель</h3>
+            <h3 className="AboutProject__stage">На&nbsp;выполнение диплома ушло 5 недель</h3>
             <p className="AboutProject__description">У&nbsp;каждого этапа был мягкий и&nbsp;жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
           </div>
         </div>
