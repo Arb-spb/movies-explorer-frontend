@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer className="Footer">
       <div className="Footer__container">
-        <h5 className="Footer__title">Учебный проект Яндекс.Практикум х&nbsp;BeatFilm.</h5>
+        <p className="Footer__title">Учебный проект Яндекс.Практикум х&nbsp;BeatFilm.</p>
         <div className="Footer__wrap">
           <a href="https://practicum.yandex.ru" className="Footer__praktikum" target="_blank" rel="noreferrer nofollow noopener">Яндекс.Практикум</a>
           <a href="https://github.com/arba-octo" className="Footer__github" target="_blank" rel="noreferrer nofollow noopener">Github</a>

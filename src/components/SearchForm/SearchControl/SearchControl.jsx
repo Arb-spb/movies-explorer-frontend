@@ -9,7 +9,6 @@ function SearchControl() {
         <input
           type="text"
           autoComplete="off"
-          autoCorrect="off"
           autoCapitalize="off"
           spellCheck="false"
           aria-autocomplete="list"

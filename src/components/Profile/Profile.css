@@ -10,8 +10,13 @@
 }
 @media (min-width: 768px){
   .Profile__container {
-    padding: 70px 0;
+    padding: 236px 0;
     max-width: 410px;
+  }
+}
+@media (min-width: 1024px){
+  .Profile__container {
+    padding: 70px 0;
   }
 }
 
@@ -23,6 +28,11 @@
   margin-bottom: 80px;
 }
 @media (min-width: 768px){
+  .Profile__title {
+    margin-bottom: 96px;
+  }
+}
+@media (min-width: 1024px){
   .Profile__title {
     margin-bottom: 125px;
   }
@@ -53,6 +63,11 @@
   padding-bottom: 380px;
 }
 @media (min-width: 768px){
+  .Profile__email {
+    padding-bottom: 211px;
+  }
+}
+@media (min-width: 1024px){
   .Profile__email {
     padding-bottom: 220px;
   }

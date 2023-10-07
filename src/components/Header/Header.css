@@ -51,7 +51,7 @@
 .Header__Navigation {
     display: none;
 }
-@media (min-width: 768px){
+@media (min-width: 1024px){
     .Header__Navigation {
         display: flex;
     }
