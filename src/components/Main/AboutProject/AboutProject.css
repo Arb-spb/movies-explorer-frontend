@@ -1,0 +1,147 @@
+.AboutProject {
+  background-color: var(--main-bg-color);
+}
+
+.AboutProject__container {
+  padding: 70px 18px;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px){
+  .AboutProject__container {
+    max-width: 1280px;
+    padding: 90px 50px 82px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutProject__container {
+    padding: 112px 70px 100px;
+  }
+}
+
+.AboutProject__title {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-bg-color);
+  letter-spacing: -.7px;
+}
+@media (min-width: 768px){
+  .AboutProject__title {
+    font-size: 22px;
+    line-height: 26px;
+    padding-bottom: 25px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutProject__title {
+    letter-spacing: -.9px;
+  }
+}
+
+.AboutProject__content {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0;
+  gap: 58px;
+}
+@media (min-width: 768px){
+  .AboutProject__content {
+    display: flex;
+    flex-direction: row;
+    margin: 70px 0 90px;
+    gap: 35px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutProject__content {
+    margin: 70px 0 110px;
+    gap: 50px;
+  }
+}
+
+.AboutProject__stage {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  letter-spacing: -.75px;
+}
+@media (min-width: 768px){
+  .AboutProject__stage {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -.8px;
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutProject__stage {
+    margin-bottom: 25px;
+    letter-spacing: -.9px;
+  }
+}
+
+.AboutProject__description {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+}
+@media (min-width: 768px){
+  .AboutProject__description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutProject__description {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+}
+
+.AboutProject__tabs {
+  display: flex;
+}
+
+.AboutProject__description_tab {
+  padding: 10px 10px;
+  text-align: center;
+}
+@media (min-width: 768px){
+  .AboutProject__description_tab {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.AboutProject__description_tab-green {
+  background-color: var(--green-bg-color);
+  color: var(--secondary-color);
+}
+
+.AboutProject__description_tab-gray {
+  background-color: var(--gray-bg-color);
+}
+
+.AboutProject__description_tab:first-of-type {
+  flex-basis: 100px;
+  flex-shrink: 0;
+}
+@media (min-width: 768px){
+  .AboutProject__description_tab:first-of-type {
+    flex-basis: 140px;
+  }
+}
+@media (min-width: 1024px){
+  .AboutProject__description_tab:first-of-type {
+    flex-basis: 228px;
+  }
+}
+
+.AboutProject__description_tab:last-of-type {
+  flex-grow: 1;
+}

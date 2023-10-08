@@ -1,0 +1,131 @@
+.Techs {
+  background-color: var(--section-bg-color);
+}
+
+.Techs__container {
+  margin: 0 auto;
+  max-width: 320px;
+  width: 100%;
+  padding: 57px 18px;
+}
+@media (min-width: 768px){
+  .Techs__container {
+    max-width: 1280px;
+    padding: 90px 50px;
+  }
+}
+@media (min-width: 1024px){
+  .Techs__container {
+    padding: 102px 70px 99px;
+  }
+}
+
+.Techs__title {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-bg-color);
+  letter-spacing: -.8px;
+}
+@media (min-width: 768px){
+  .Techs__title {
+    font-size: 22px;
+    line-height: 26px;
+    padding-bottom: 23px;
+  }
+}
+
+.Techs__main {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 58px;
+  margin-bottom: 24px;
+  letter-spacing: -.9px;
+}
+@media (min-width: 768px){
+  .Techs__main {
+    font-size: 50px;
+    line-height: 58px;
+    margin-top: 80px;
+    margin-bottom: 22px;
+    letter-spacing: -1.8px;
+  }
+}
+@media (min-width: 1024px){
+  .Techs__main {
+    margin-top: 90px;
+    letter-spacing: -1.9px;
+    margin-bottom: 26px;
+  }
+}
+
+.Techs__description {
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: -0.4px;
+}
+@media (min-width: 768px){
+  .Techs__description {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 83px;
+    max-width: 460px;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 0;
+  }
+}
+@media (min-width: 1024px){
+  .Techs__description {
+    font-size: inherit;
+    line-height: inherit;
+    max-width: 500px;
+    margin-bottom: 100px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.Techs__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.Techs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(84px, 1fr));
+  gap: 11px;
+}
+@media (min-width: 768px){
+  .Techs__list {
+    grid-template-columns: repeat(7, minmax(84px, 1fr));
+  }
+}
+@media (min-width: 1024px){
+  .Techs__list {
+    grid-template-columns: repeat(7, 90px);
+  }
+}
+
+.Techs__item {
+  padding: 21px 15px;
+  background-color: var(--gray-bg-color);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.2px;
+}
+@media (min-width: 1024px){
+  .Techs__item {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}

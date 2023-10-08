@@ -1,0 +1,99 @@
+.SearchControl {
+  border-radius: 9px;
+  display: flex;
+  height: 72px;
+  z-index: 100;
+  background-color: var(--search-bg-color);
+  width: 100%;
+}
+@media (min-width: 768px){
+  .SearchControl {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.SearchControl__wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px){
+  .SearchControl__wrapper {
+    padding-left: 24px;
+  }
+}
+@media (min-width: 1024px){
+  .SearchControl__wrapper {
+    padding-right: 28px;
+  }
+}
+
+.SearchControl__img {
+  display: none;
+}
+@media (min-width: 768px){
+  .SearchControl__img {
+    display: inline-flex;
+  }
+}
+
+.SearchControl__input {
+  background: transparent;
+  border: none;
+  color: var(--main-color);
+  display: block;
+  font-family: inherit;
+  height: 100%;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  padding: 0 85px 0 19px;
+}
+@media (min-width: 768px){
+  .SearchControl__input {
+    font-size: 18px;
+    line-height: 20px;
+    padding-left: 63px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.SearchControl__input:focus {
+  box-shadow: 0 0 0 1px var(--action-bg-color);
+  border-radius: 9px;
+}
+
+.SearchControl__submit {
+  background-color: var(--action-bg-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+@media (min-width: 768px){
+  .SearchControl__submit {
+    right: 227px;
+  }
+}
+@media (min-width: 1024px){
+  .SearchControl__submit {
+    right: 257px;
+  }
+}
+
+.SearchControl__submit:hover,
+.SearchControl__submit:active {
+  background-color: rgba(66, 133, 244, .8);
+}

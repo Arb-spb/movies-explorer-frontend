@@ -1,0 +1,13 @@
+.SearchForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  width: 100%;
+}
+@media (min-width: 768px){
+  .SearchForm {
+    flex-direction: row;
+    gap: 0;
+  }
+}

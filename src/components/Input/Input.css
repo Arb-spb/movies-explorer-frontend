@@ -1,0 +1,34 @@
+.Input__label {
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--three-color);
+}
+
+.Input__control {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--main-color);
+  padding: 4px 0 8px;
+  border-bottom: 1px solid var(--secondary-border-bg-color);
+  caret-color: var(--main-color);
+}
+
+.Input__control:-webkit-autofill,
+.Input__control:-webkit-autofill:hover,
+.Input__control:-webkit-autofill:focus,
+.Input__control:-webkit-autofill:active{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--main-color);
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px transparent;
+}
+
+.Input__control:focus {
+  border-color: var(--action-bg-color);
+}

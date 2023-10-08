@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./vendor/normalize.css";
+@import "./vendor/font.css";
+
+:root {
+  --main-bg-color: #202020;
+  --secondary-bg-color: #073042;
+  --action-bg-color: #4285f4;
+  --green-bg-color: #3ddc84;
+  --gray-bg-color: #303030;
+  --border-bg-color: #dAdAdA;
+  --secondary-border-bg-color: #424242;
+  --section-bg-color: #272727;
+  --search-bg-color: #2f2f2f;
+  --thum-bg-color: #343434;
+  --thum-bg-checked: #2BE080;
+  --like-bg-color: #313131;
+  --two-bg-color: #505050;
+
+  --main-color: #fff;
+  --main-color-hover: #a0a0a0;
+  --three-color: #8b8b8b;
+  --main-color-active: #3456f3;
+  --secondary-color: #000;
+  --error-color: #ee3465;
+
+  --main-border-radius: 3px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  outline: 0;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+img {
+  max-width: 100%;
 }
