@@ -16,6 +16,7 @@ function MoviesCard(props) {
     description,
     trailerLink,
     nameEN,
+    deleteId,
   } = props;
 
   return (
@@ -38,6 +39,7 @@ function MoviesCard(props) {
           thumbnail: `${URL_BASE_MOVIES_API}${image.formats.thumbnail.url}`,
           movieId: id,
           favorite,
+          deleteId,
         })}>
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
             <path
@@ -48,6 +50,7 @@ function MoviesCard(props) {
         </button>
       </div>
       <span className="MoviesCard__time">{getMoviesTime(duration)}</span>
+      <a href={trailerLink} className="MoviesCard__trailerLink" target="_blank" rel="noreferrer noopener nofollow" />
     </div>
   )
 }

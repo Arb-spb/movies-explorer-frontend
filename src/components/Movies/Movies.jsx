@@ -3,7 +3,7 @@ import Preloader from './Preloader/Preloader';
 import {STATUS_API_ERROR, STATUS_LOADING, STATUS_NOT_FOUND_CARD} from '../../constants';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from './MoviesCardList/MoviesCardList';
-import NotFoundCard from './NotFoundCard/NotFoundCard';
+import NotFoundCard from '../NotFoundCard/NotFoundCard';
 import MoviesApiError from './MoviesApiError/MoviesApiError';
 import { useMovies } from '../../hooks/useMovies';
 

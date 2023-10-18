@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useMemo } from 'react';
+import { useReducer, useEffect } from 'react';
 import {
   ACTION_MOVIES_CHANGE_VALUE,
   ACTION_MOVIES_SEARCH_ERROR,
@@ -14,12 +14,14 @@ import {
   ACTION_MOVIES_NOT_FOUND,
   STATUS_NOT_FOUND_CARD,
   LOCAL_STORAGE_IS_SHORTS,
-  STATUS_API_ERROR, ACTION_MOVIES_SHORTS, ACTION_MOVIES_CHANGE_DATA,
+  STATUS_API_ERROR,
+  ACTION_MOVIES_SHORTS,
+  ACTION_MOVIES_CHANGE_DATA,
 } from '../constants';
 import { moviesApi } from '../utils/MoviesApi';
 import { getMoviesData } from '../utils/GetMoviesData';
 import { useCardAddCount } from './useCardAddCount';
-import {getSaveMovies, likeMovies} from '../utils/MainApi';
+import {deleteLike, getSaveMovies, likeMovies} from '../utils/MainApi';
 
 const initialState = {
   status: STATUS_INIT,
@@ -93,13 +95,19 @@ const reducer = (state, action) => {
 
 function useMovies() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  let moviesDataStorage = localStorage.getItem(LOCAL_STORAGE_MOVIES_NAME);
-  let moviesData = useMemo(() => moviesDataStorage ? JSON.parse(moviesDataStorage) : [], [moviesDataStorage]);
   const { countAdd, countInit} = useCardAddCount();
+
+  function getStorageMoviesData() {
+    const moviesDataStorage = localStorage.getItem(LOCAL_STORAGE_MOVIES_NAME);
+    const moviesData = moviesDataStorage ? JSON.parse(moviesDataStorage) : [];
+
+    return moviesData;
+  }
 
   useEffect(() => {
     const searchValueStorage = localStorage.getItem(LOCAL_STORAGE_SEARCH_VALUE) ?? '';
     const isShortsStorage = JSON.parse(localStorage.getItem(LOCAL_STORAGE_IS_SHORTS)) ?? false;
+    const moviesData = getStorageMoviesData();
 
     if (searchValueStorage) {
       const { filteredData, searchLength } = getMoviesData(moviesData, searchValueStorage, isShortsStorage, countInit);
@@ -112,7 +120,7 @@ function useMovies() {
           isShorts: isShortsStorage,
         }})
     }
-  }, [countInit, moviesData]);
+  }, [countInit]);
 
   const handleChange = (e) => {
     if (state.errorSearchText) {
@@ -131,6 +139,8 @@ function useMovies() {
     }
 
     dispatch({ type: ACTION_MOVIES_CHANGE_STATUS, payload: STATUS_LOADING });
+
+    let moviesData = getStorageMoviesData();
 
     if (!moviesData.length) {
       const [{ data, error }, { data: saveMovies }] = await Promise.all([moviesApi(), getSaveMovies()])
@@ -161,6 +171,7 @@ function useMovies() {
 
   const handleShorts = () => {
     dispatch({ type: ACTION_MOVIES_SHORTS });
+    const moviesData = getStorageMoviesData();
     localStorage.setItem(LOCAL_STORAGE_IS_SHORTS, JSON.stringify(!state.isShorts));
 
     if (state.value.length) {
@@ -175,32 +186,45 @@ function useMovies() {
   }
 
   const handleMore = () => {
+    const moviesData = getStorageMoviesData();
     const currentLength = state.data.length;
     const newCorrectLength = currentLength + countAdd;
     const { filteredData, searchLength } = getMoviesData(moviesData, state.value, state.isShorts, newCorrectLength);
-    console.log(filteredData.length)
 
     dispatch({ type: ACTION_MOVIES_API_SUCCESS, payload: { data: filteredData, isMore: searchLength > newCorrectLength } });
   }
 
-  const handleLike = async ({ favorite, ...req }) => {
-    if (favorite) {
+  const getNewMoviesData = (movieId, favorite, deleteId) => {
+    const moviesData = getStorageMoviesData();
 
+    const newMoviesData = moviesData.map((item) => ({
+      ...item,
+      favorite: item.id === movieId ? favorite : item.favorite,
+      deleteId: item.id === movieId ? deleteId : item.deleteId,
+    }));
+
+    return newMoviesData;
+  }
+
+  const handleLike = async ({ favorite, deleteId, ...req }) => {
+    const currentLength = state.data.length;
+
+    if (favorite) {
+      const { data, error } = await deleteLike(deleteId);
+      if (error) return;
+
+      const newMoviesData = getNewMoviesData(data.movieId, !favorite, null);
+      const { filteredData } = getMoviesData(newMoviesData, state.value, state.isShorts, currentLength);
+      localStorage.setItem(LOCAL_STORAGE_MOVIES_NAME, JSON.stringify(newMoviesData));
+      dispatch({ type: ACTION_MOVIES_CHANGE_DATA, payload: filteredData });
     } else {
       const { data, error } = await likeMovies(req);
       if (error) return;
 
-      const currentLength = state.data.length;
-      console.log(currentLength)
-      return
-      const storageMovies = localStorage.getItem(LOCAL_STORAGE_MOVIES_NAME);
-      const parseMovies = JSON.parse(storageMovies);
-      const newMoviesData = parseMovies.map((item) => ({...item, favorite: item.id === data.movieId ? true : item.favorite }));
-
+      const newMoviesData = getNewMoviesData(data.movieId, !favorite, data._id);
+      const { filteredData } = getMoviesData(newMoviesData, state.value, state.isShorts, currentLength);
       localStorage.setItem(LOCAL_STORAGE_MOVIES_NAME, JSON.stringify(newMoviesData));
-
-      const { filteredData, searchLength } = getMoviesData(newMoviesData, state.value, state.isShorts, currentLength);
-      dispatch({ type: ACTION_MOVIES_API_SUCCESS, payload: { data: filteredData, isMore: searchLength > currentLength } });
+      dispatch({ type: ACTION_MOVIES_CHANGE_DATA, payload: filteredData });
     }
   }
 

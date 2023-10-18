@@ -1,13 +1,20 @@
 import './Register.css';
-import logo from "../../images/logo.svg";
-import { Link } from "react-router-dom";
-import { ROUTE_LOGIN } from "../../constants";
+import logo from '../../images/logo.svg';
+import { Link, Navigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { ROUTE_HOME, ROUTE_LOGIN } from "../../constants";
 import Input from '../Input/Input';
 import { useRegister } from '../../hooks/useRegister';
+import { AuthContext } from '../../contexts/AuthContext';
 
 function Register() {
+  const auth = useContext(AuthContext);
   const [state, func] = useRegister();
   const isDisabled = !state.name || !!state.errName || !state.email || !!state.errEmail || !state.password || !!state.errPassword
+
+  if (auth.user) {
+    return <Navigate to={ROUTE_HOME} replace />;
+  }
 
   return (
     <main className="Register">

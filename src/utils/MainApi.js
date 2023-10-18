@@ -95,3 +95,17 @@ export async function getSaveMovies() {
     return { data: null, error: ERROR_SIGNIN_TEXT }
   }
 }
+
+export async function deleteLike(movieId) {
+  try {
+    const response = await fetcher(`/movies/${movieId}`, {
+      method: "DELETE",
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
+      },
+    });
+    return { data: response, error: null }
+  } catch {
+    return { data: null, error: ERROR_SIGNIN_TEXT }
+  }
+}

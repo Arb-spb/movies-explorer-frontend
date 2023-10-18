@@ -1,12 +1,19 @@
 import './Login.css';
-import { Link } from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
+import { useContext } from 'react';
 import logo from '../../images/logo.svg';
-import { ROUTE_REGISTER } from '../../constants';
+import { ROUTE_HOME, ROUTE_REGISTER } from '../../constants';
 import Input from '../Input/Input';
 import { useLogin } from '../../hooks/useLogin';
+import { AuthContext } from '../../contexts/AuthContext';
 
 function Login() {
+  const auth = useContext(AuthContext);
   const [state, func] = useLogin();
+
+  if (auth.user) {
+    return <Navigate to={ROUTE_HOME} replace />;
+  }
 
   return (
     <main className="Login">

@@ -1,14 +1,15 @@
 import './MoviesCardList.css';
-import { FAKE_SAVE_CARDS_LIST } from '../../../constants';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
-function MoviesCardList() {
+function MoviesCardList(props) {
+  const { cards,onDelete } = props;
+
   return (
     <div className="SavedMoviesCardList">
       <ul className="SavedMoviesCardList__list">
-        {FAKE_SAVE_CARDS_LIST.map((card) => (
-          <li key={card.id}>
-            <MoviesCard {...card} />
+        {cards.map((card) => (
+          <li key={card._id}>
+            <MoviesCard {...card} onDelete={onDelete} />
           </li>
         ))}
       </ul>

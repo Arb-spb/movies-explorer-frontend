@@ -121,27 +121,14 @@ export const ACTION_PROFILE_ERROR_EMAIL = 'action-profile-error-email';
 export const ACTION_PROFILE_RESET = 'action-profile-reset';
 export const ACTION_PROFILE_ERROR_API = 'action-profile-error-api';
 export const ACTION_PROFILE_SUCCESS_API = 'action-profile-success-api';
-
-export const FAKE_SAVE_CARDS_LIST = [
-  {
-    id: 1,
-    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
-    text: 'Большой дом',
-    duration: 92
-  },
-  {
-    id: 2,
-    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
-    text: 'Кибердеревня',
-    duration: 126
-  },
-  {
-    id: 3,
-    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
-    text: 'Новые папины дочки',
-    duration: 104
-  },
-];
+export const ACTION_SAVE_MOVIES_SUCCESS_API = 'action-save-movies-success-api';
+export const ACTION_SAVE_MOVIES_ERROR_API = 'action-save-movies-error-api';
+export const ACTION_SAVE_CHANGE = 'action-save-movies-change';
+export const ACTION_SAVE_RESET_ERROR_API = 'action-save-movies-reset-error-api';
+export const ACTION_SAVE_MOVIES_SEARCH_ERROR = 'action-save-movies-search-error';
+export const ACTION_SAVE_MOVIES_SHORTS = 'action-save-movies-shorts';
+export const ACTION_SAVE_MOVIES_SEARCH = 'action-save-movies-search';
+export const ACTION_SAVE_MOVIES_DELETE = 'action-save-movies-delete';
 
 export const ERROR_SEARCH_TEXT = 'Нужно ввести ключевое слово';
 export const ERROR_MOVIES_API_TEXT = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';

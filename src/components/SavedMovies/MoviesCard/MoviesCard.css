@@ -8,6 +8,15 @@
   visibility: visible;
 }
 
+.SavedMoviesCard__wrapper {
+  display: flex;
+}
+.SavedMoviesCard__img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 16 / 9;
+}
+
 .SavedMoviesCard__content {
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useLocation, Navigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
-import { ROUTE_LOGIN, STATUS_AUTH_SUCCESS } from '../../constants';
+import { ROUTE_HOME, STATUS_AUTH_SUCCESS } from '../../constants';
 
 function RequireAuth({ children }) {
   const auth = useContext(AuthContext);
@@ -14,7 +14,7 @@ function RequireAuth({ children }) {
   }
 
   if (!auth.user) {
-    return <Navigate to={ROUTE_LOGIN} state={{ from: location }} replace />;
+    return <Navigate to={ROUTE_HOME} state={{ from: location }} replace />;
   }
 
   return children;
