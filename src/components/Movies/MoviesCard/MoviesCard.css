@@ -1,6 +1,16 @@
 .MoviesCard {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.MoviesCard__wrapper {
+  display: flex;
+}
+.MoviesCard__img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 16 / 9;
 }
 
 .MoviesCard__content {
@@ -14,6 +24,13 @@
 .MoviesCard__text {
   font-size: 12px;
   line-height: 14px;
+  font-weight: 500;
+}
+@media (min-width: 768px){
+  .MoviesCard__text {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 .Movies__icon {
@@ -23,6 +40,7 @@
   background-color: var(--like-bg-color);
   display: grid;
   place-items: center;
+  flex-shrink: 0;
 }
 
 .MoviesCard__time {

@@ -11,3 +11,11 @@
     gap: 0;
   }
 }
+
+.SearchForm__error {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--error-color);
+}

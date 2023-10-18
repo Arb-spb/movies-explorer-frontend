@@ -1,0 +1,9 @@
+.NotFoundCard {
+  display: flex;
+  justify-content: center;
+}
+
+.NotFoundCard__text {
+  font-size: 20px;
+  line-height: 26px;
+}

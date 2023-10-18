@@ -41,7 +41,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--secondary-bg-color);
+  background-color: var(--main-bg-color);
   border-radius: 50px;
 }
 
@@ -63,6 +63,6 @@
 
 .Preloader__round::before {
   z-index: 10;
-  background: var(--secondary-bg-color);
+  background-color: var(--main-bg-color);
   animation: Preloader-inside-red 1s ease-in-out infinite;
 }

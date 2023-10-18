@@ -1,3 +1,7 @@
+.Input {
+  position: relative;
+}
+
 .Input__label {
   font-size: 10px;
   line-height: 12px;
@@ -31,4 +35,12 @@
 
 .Input__control:focus {
   border-color: var(--action-bg-color);
+}
+
+.Input__error {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-size: 12px;
+  color: var(--error-color);
 }

@@ -35,7 +35,7 @@ export const NAVIGATION_DESKTOP = [
     to: ROUTE_SAVED_MOVIES,
     text: 'Сохранённые фильмы'
   }
-]
+];
 
 export const TECHNOLOGIES = [
   {
@@ -66,7 +66,7 @@ export const TECHNOLOGIES = [
     id: 7,
     text: 'mongoDB'
   }
-]
+];
 export const PORTFOLIO = [
   {
     id: 1,
@@ -83,117 +83,44 @@ export const PORTFOLIO = [
     to: 'https://github.com/arba-octo/movies-explorer-frontend',
     text: 'Одностраничное приложение'
   }
-]
+];
 
-export const STATUS_LOADING = 'status-loading'
+export const STATUS_INIT = 'status-init';
+export const STATUS_LOADING = 'status-loading';
+export const STATUS_NOT_FOUND_CARD = 'status-not-found-card';
+export const STATUS_API_ERROR = 'status-api-error';
 
-export const FAKE_CARDS_LIST = [
-  {
-    id: 1,
-    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
-    text: 'Большой дом',
-    favorite: true,
-    duration: 92
-  },
-  {
-    id: 2,
-    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
-    text: 'Кибердеревня',
-    favorite: false,
-    duration: 126
-  },
-  {
-    id: 3,
-    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
-    text: 'Новые папины дочки',
-    favorite: false,
-    duration: 104
-  },
-  {
-    id: 4,
-    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
-    text: 'Большой дом',
-    favorite: true,
-    duration: 92
-  },
-  {
-    id: 5,
-    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
-    text: 'Кибердеревня',
-    favorite: false,
-    duration: 126
-  },
-  {
-    id: 6,
-    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
-    text: 'Новые папины дочки',
-    favorite: false,
-    duration: 104
-  },
-  {
-    id: 7,
-    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
-    text: 'Большой дом',
-    favorite: true,
-    duration: 92
-  },
-  {
-    id: 8,
-    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
-    text: 'Кибердеревня',
-    favorite: false,
-    duration: 126
-  },
-  {
-    id: 9,
-    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
-    text: 'Новые папины дочки',
-    favorite: false,
-    duration: 104
-  },
-  {
-    id: 10,
-    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
-    text: 'Большой дом',
-    favorite: true,
-    duration: 92
-  },
-  {
-    id: 11,
-    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
-    text: 'Кибердеревня',
-    favorite: false,
-    duration: 126
-  },
-  {
-    id: 12,
-    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
-    text: 'Новые папины дочки',
-    favorite: false,
-    duration: 104
-  },
-  {
-    id: 13,
-    src: 'https://avatars.mds.yandex.net/get-ott/212840/2a0000018adcc44c15a921f0e79f2377279c/375x234',
-    text: 'Большой дом',
-    favorite: true,
-    duration: 92
-  },
-  {
-    id: 14,
-    src: 'https://avatars.mds.yandex.net/get-ott/1652588/2a0000018a88f373c68d4d66fe074ca4fa5b/640x360',
-    text: 'Кибердеревня',
-    favorite: false,
-    duration: 126
-  },
-  {
-    id: 15,
-    src: 'https://avatars.mds.yandex.net/get-ott/2439731/2a0000018a99f252e5717c0cb3fbb559c81e/640x360',
-    text: 'Новые папины дочки',
-    favorite: false,
-    duration: 104
-  },
-]
+export const ACTION_MOVIES_CHANGE_VALUE = 'action-movies-change-value';
+export const ACTION_MOVIES_CHANGE_DATA = 'action-movies-change-data';
+export const ACTION_MOVIES_SEARCH_ERROR = 'action-movies-search-error';
+export const ACTION_MOVIES_API_ERROR = 'action-movies-api-error';
+export const ACTION_MOVIES_API_SUCCESS = 'action-movies-api-success';
+export const ACTION_MOVIES_API_INIT = 'action-movies-api-init';
+export const ACTION_MOVIES_CHANGE_STATUS = 'action-movies-change-status';
+export const ACTION_MOVIES_NOT_FOUND = 'action-movies-not-found';
+export const ACTION_MOVIES_SHORTS = 'action-movies-shorts';
+export const ACTION_MOVIES_ADD_MORE = 'action-movies-add-more';
+export const ACTION_LOGIN_CHANGE_EMAIL = 'action-login-change-email';
+export const ACTION_LOGIN_CHANGE_PASSWORD = 'action-login-change-password';
+export const ACTION_LOGIN_ERROR_EMAIL = 'action-login-error-email';
+export const ACTION_LOGIN_ERROR_PASSWORD = 'action-login-error-password';
+export const ACTION_LOGIN_ERROR_API = 'action-login-error-api';
+export const ACTION_REGISTER_CHANGE_NAME = 'action-register-change-name';
+export const ACTION_REGISTER_ERROR_NAME = 'action-register-error-name';
+export const ACTION_REGISTER_CHANGE_EMAIL = 'action-register-change-email';
+export const ACTION_REGISTER_ERROR_EMAIL = 'action-register-error-email';
+export const ACTION_REGISTER_CHANGE_PASSWORD = 'action-register-change-password';
+export const ACTION_REGISTER_ERROR_PASSWORD = 'action-register-error-password';
+export const ACTION_REGISTER_ERROR_API = 'action-register-error-api';
+export const ACTION_PROFILE_EDIT = 'action-profile-edit';
+export const ACTION_PROFILE_INIT = 'action-profile-init';
+export const ACTION_PROFILE_ERROR_NAME = 'action-profile-error-name';
+export const ACTION_PROFILE_CHANGE_NAME = 'action-profile-change-name';
+export const ACTION_PROFILE_CHANGE_EMAIL = 'action-profile-change-email';
+export const ACTION_PROFILE_ERROR_EMAIL = 'action-profile-error-email';
+export const ACTION_PROFILE_RESET = 'action-profile-reset';
+export const ACTION_PROFILE_ERROR_API = 'action-profile-error-api';
+export const ACTION_PROFILE_SUCCESS_API = 'action-profile-success-api';
 
 export const FAKE_SAVE_CARDS_LIST = [
   {
@@ -214,4 +141,22 @@ export const FAKE_SAVE_CARDS_LIST = [
     text: 'Новые папины дочки',
     duration: 104
   },
-]
+];
+
+export const ERROR_SEARCH_TEXT = 'Нужно ввести ключевое слово';
+export const ERROR_MOVIES_API_TEXT = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
+export const ERROR_SIGNIN_TEXT = 'Что-то пошло не так...';
+
+export const URL_BASE_MOVIES_API = 'https://api.nomoreparties.co';
+// export const URL_BASE_MAIN_API = 'https://api.movies.best.nomoredom.nomoredomainsrocks.ru';
+export const URL_BASE_MAIN_API = 'http://localhost:3001';
+export const URL_MOVIES_API = 'https://api.nomoreparties.co/beatfilm-movies';
+
+export const LOCAL_STORAGE_MOVIES_NAME = 'local_storage_movies_name';
+export const LOCAL_STORAGE_SEARCH_VALUE = 'local_storage_search_value';
+export const LOCAL_STORAGE_IS_SHORTS = 'local_storage_is_shorts';
+export const EMAIL_REGEXP = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/ ;
+export const NAME_REGEXP = /^[a-zа-яё\s-]+$/i ;
+export const STATUS_AUTH_INIT = 'init-auth';
+export const STATUS_AUTH_LOAD = 'init-load';
+export const STATUS_AUTH_SUCCESS = 'init-success';

@@ -49,6 +49,10 @@
   }
 }
 
+.Login__from {
+  position: relative;
+}
+
 .Login__group:not(:last-of-type) {
   margin-bottom: 18px;
 }
@@ -74,6 +78,12 @@
   background-color: rgba(66, 133, 244, .9);
 }
 
+.Login__submit:disabled {
+  background-color: var(--like-bg-color);
+  cursor: auto;
+  pointer-events: none;
+}
+
 .Login__text {
   font-size: 12px;
   line-height: 14px;text-align: center;
@@ -89,4 +99,13 @@
 .Login__register {
   color: var(--action-bg-color);
   margin-left: 5px;
+}
+
+.Login__error {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--error-color);
 }

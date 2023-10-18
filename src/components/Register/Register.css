@@ -49,6 +49,10 @@
   }
 }
 
+.Register__from {
+  position: relative;
+}
+
 .Register__input {
   display: block;
   box-sizing: border-box;
@@ -107,6 +111,12 @@
   background-color: rgba(66, 133, 244, .9);
 }
 
+.Register__submit:disabled {
+  background-color: var(--like-bg-color);
+  cursor: auto;
+  pointer-events: none;
+}
+
 .Register__text {
   font-size: 12px;
   line-height: 14px;
@@ -123,4 +133,13 @@
 .Register__register {
   color: var(--action-bg-color);
   margin-left: 5px;
+}
+
+.Register__error {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--error-color);
 }

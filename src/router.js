@@ -7,6 +7,7 @@ import Profile from './components/Profile/Profile';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import NotFound from './components/404/404';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 import {
   ROUTE_HOME,
   ROUTE_MOVIES,
@@ -28,15 +29,33 @@ export const router = createBrowserRouter([
       },
       {
         path: ROUTE_MOVIES,
-        element: <Movies />,
+        Component(){
+          return (
+            <RequireAuth>
+              <Movies />
+            </RequireAuth>
+          )
+        },
       },
       {
         path: ROUTE_SAVED_MOVIES,
-        element: <SavedMovies />,
+        Component(){
+          return (
+            <RequireAuth>
+              <SavedMovies />
+            </RequireAuth>
+          )
+        },
       },
       {
         path: ROUTE_PROFILE,
-        element: <Profile />,
+        Component(){
+          return (
+            <RequireAuth>
+              <Profile />
+            </RequireAuth>
+          )
+        },
       },
     ]
   },
