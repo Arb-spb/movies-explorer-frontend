@@ -135,8 +135,7 @@ export const ERROR_MOVIES_API_TEXT = 'Во время запроса произ�
 export const ERROR_SIGNIN_TEXT = 'Что-то пошло не так...';
 
 export const URL_BASE_MOVIES_API = 'https://api.nomoreparties.co';
-// export const URL_BASE_MAIN_API = 'https://api.movies.best.nomoredom.nomoredomainsrocks.ru';
-export const URL_BASE_MAIN_API = 'http://localhost:3001';
+export const URL_BASE_MAIN_API = 'https://api.movies.best.nomoredom.nomoredomainsrocks.ru';
 export const URL_MOVIES_API = 'https://api.nomoreparties.co/beatfilm-movies';
 
 export const LOCAL_STORAGE_MOVIES_NAME = 'local_storage_movies_name';
