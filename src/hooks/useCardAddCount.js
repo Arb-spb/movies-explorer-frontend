@@ -6,7 +6,7 @@ export function useCardAddCount() {
   if (width < 590) {
     return {
       countAdd: 2,
-      countInit: 4
+      countInit: 5
     };
   }
 

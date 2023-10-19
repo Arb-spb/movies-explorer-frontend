@@ -11,6 +11,9 @@ import {
   ROUTE_HOME,
   ACTION_PROFILE_ERROR_API,
   ACTION_PROFILE_SUCCESS_API,
+  LOCAL_STORAGE_MOVIES_NAME,
+  LOCAL_STORAGE_SEARCH_VALUE,
+  LOCAL_STORAGE_IS_SHORTS,
 } from '../constants';
 import { validateName } from '../utils/ValidateName';
 import { validateEmail } from "../utils/ValidateEmail";
@@ -151,6 +154,9 @@ export function useProfile() {
 
   const handleLogOut = () => {
     localStorage.removeItem('jwt');
+    localStorage.removeItem(LOCAL_STORAGE_MOVIES_NAME);
+    localStorage.removeItem(LOCAL_STORAGE_SEARCH_VALUE);
+    localStorage.removeItem(LOCAL_STORAGE_IS_SHORTS);
     auth.func.removeUser();
     navigate(ROUTE_HOME);
   }
