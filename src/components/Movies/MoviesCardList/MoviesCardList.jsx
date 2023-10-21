@@ -1,18 +1,27 @@
 import './MoviesCardList.css';
-import { FAKE_CARDS_LIST } from '../../../constants';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
-function MoviesCardList() {
+function MoviesCardList(props) {
+  const { cards, isMore, onMore, onLike } = props;
+
   return (
     <div className="MoviesCardList">
       <ul className="MoviesCardList__list">
-        {FAKE_CARDS_LIST.map((card) => (
+        {cards.map((card) => (
           <li key={card.id}>
-            <MoviesCard {...card} />
+            <MoviesCard {...card} onLike={onLike} />
           </li>
         ))}
       </ul>
-      <button type="button" className="MoviesCardList__more">Еще</button>
+      {isMore && (
+        <button
+          type="button"
+          className="MoviesCardList__more"
+          onClick={onMore}
+        >
+          Еще
+        </button>
+      )}
     </div>
   )
 }

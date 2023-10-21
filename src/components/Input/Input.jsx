@@ -6,19 +6,25 @@ function Input(props) {
     type,
     name,
     label,
-    placeholder = ''
+    placeholder = '',
+    value,
+    onChange,
+    errText,
   } = props;
 
   return (
     <div className="Input">
-      <lable htmlFor={htmlFor} className="Input__label">{label}</lable>
+      <label htmlFor={htmlFor} className="Input__label">{label}</label>
       <input
         id={htmlFor}
         type={type}
         name={name}
         className="Input__control"
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
       />
+      {errText && <span className="Input__error">{errText}</span>}
     </div>
   )
 }

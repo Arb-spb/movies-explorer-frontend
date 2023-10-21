@@ -1,15 +1,17 @@
 import './Header.css';
-import { useState } from 'react';
+import {useContext, useState} from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import logo from '../../images/logo.svg';
 import burgerOpen from '../../images/burger-open.svg';
 import { NAVIGATION_DESKTOP, ROUTE_HOME } from "../../constants";
+import {AuthContext} from "../../contexts/AuthContext";
 
 function Header() {
+  const auth = useContext(AuthContext);
   const location = useLocation();
   const [isOpen, setOpen] = useState(false);
-  const isAuth = true;
+  const isAuth = !!auth.user;
   let isDark = true;
 
   if (location.pathname === ROUTE_HOME) {

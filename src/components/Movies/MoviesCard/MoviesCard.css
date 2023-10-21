@@ -1,6 +1,17 @@
 .MoviesCard {
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.MoviesCard__wrapper {
+  display: flex;
+}
+.MoviesCard__img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 16 / 9;
 }
 
 .MoviesCard__content {
@@ -14,15 +25,25 @@
 .MoviesCard__text {
   font-size: 12px;
   line-height: 14px;
+  font-weight: 500;
+}
+@media (min-width: 768px){
+  .MoviesCard__text {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 .Movies__icon {
+  position: relative;
+  z-index: 2;
   width: 24px;
   height: 24px;
   border-radius: 50px;
   background-color: var(--like-bg-color);
   display: grid;
   place-items: center;
+  flex-shrink: 0;
 }
 
 .MoviesCard__time {
@@ -30,4 +51,13 @@
   font-size: 10px;
   line-height: 12px;
   color: var(--three-color);
+}
+
+.MoviesCard__trailerLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }

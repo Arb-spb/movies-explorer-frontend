@@ -1,10 +1,21 @@
 import './Register.css';
-import logo from "../../images/logo.svg";
-import { Link } from "react-router-dom";
-import { ROUTE_LOGIN } from "../../constants";
+import logo from '../../images/logo.svg';
+import { Link, Navigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { ROUTE_HOME, ROUTE_LOGIN } from "../../constants";
 import Input from '../Input/Input';
+import { useRegister } from '../../hooks/useRegister';
+import { AuthContext } from '../../contexts/AuthContext';
 
 function Register() {
+  const auth = useContext(AuthContext);
+  const [state, func] = useRegister();
+  const isDisabled = !state.name || !!state.errName || !state.email || !!state.errEmail || !state.password || !!state.errPassword
+
+  if (auth.user) {
+    return <Navigate to={ROUTE_HOME} replace />;
+  }
+
   return (
     <main className="Register">
       <section className="Register__container">
@@ -12,13 +23,16 @@ function Register() {
           <img src={logo} alt="логотип" />
         </Link>
         <h1 className="Register__title">Добро пожаловать!</h1>
-        <form className="Register__from">
+        <form className="Register__from" onSubmit={func.onSubmit}>
           <div className="Register__group">
             <Input
               htmlFor="name"
               type="text"
               name="name"
               label="Имя"
+              vaue={state.name}
+              errText={state.errName}
+              onChange={func.onName}
             />
           </div>
           <div className="Register__group">
@@ -27,6 +41,9 @@ function Register() {
               type="email"
               name="email"
               label="E-mail"
+              value={state.email}
+              errText={state.errEmail}
+              onChange={func.onEmail}
             />
           </div>
           <div className="Register__group">
@@ -35,9 +52,17 @@ function Register() {
               type="password"
               name="password"
               label="Пароль"
+              value={state.password}
+              errText={state.errPassword}
+              onChange={func.onPassword}
             />
           </div>
-          <button type="submit" className="Register__submit">
+          {state.errApi && <p className="Register__error">{state.errApi}</p>}
+          <button
+            type="submit"
+            className="Register__submit"
+            disabled={isDisabled}
+          >
             <span>Зарегистрироваться</span>
           </button>
         </form>

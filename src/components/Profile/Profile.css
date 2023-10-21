@@ -44,6 +44,7 @@
   justify-content: space-between;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--secondary-border-bg-color);
+  cursor: pointer;
 }
 
 .Profile__text {
@@ -60,29 +61,30 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 18px;
-  padding-bottom: 380px;
+  margin-bottom: 380px;
+  cursor: pointer;
 }
 @media (min-width: 768px){
   .Profile__email {
-    padding-bottom: 211px;
+    margin-bottom: 211px;
   }
 }
 @media (min-width: 1024px){
   .Profile__email {
-    padding-bottom: 220px;
+    margin-bottom: 215px;
   }
 }
 
 .Profile__actions {
   display: flex;
   flex-direction: column;
-  gap: 17px;
 }
 
 .Profile__edit,
 .Profile__logout {
   font-size: 12px;
   line-height: 14px;
+  padding: 8px 20px;
 }
 @media (min-width: 768px){
   .Profile__edit,
@@ -92,8 +94,47 @@
   }
 }
 
+.Profile__edit:disabled {
+  color: var(--two-bg-color);
+  cursor: auto;
+  pointer-events: none;
+}
+
 .Profile__logout {
   color: var(--error-color);
   font-weight: 500;
   text-align: center;
+}
+
+.Profile__form {
+  margin-bottom: 380px;
+  margin-top: -5px;
+}
+@media (min-width: 768px){
+  .Profile__form {
+    margin-bottom: 211px;
+  }
+}
+@media (min-width: 1024px){
+  .Profile__form {
+    margin-bottom: 164px;
+  }
+}
+
+.Profile__group:not(:last-of-type) {
+  margin-bottom: 18px;
+}
+
+.Profile__success {
+  font-size: 12px;
+  text-align: center;
+  color: var(--green-bg-color);
+  margin-bottom: 10px;
+}
+
+.Profile__error {
+  font-size: 12px;
+  text-align: center;
+  color: var(--error-color);
+  margin-bottom: 10px;
 }
